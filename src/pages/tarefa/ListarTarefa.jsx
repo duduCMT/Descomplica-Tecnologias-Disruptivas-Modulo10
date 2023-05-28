@@ -121,10 +121,8 @@ const ListarTarefa = () => {
                       <TableCell align="right">{row.fimTarefa}</TableCell>
                       <TableCell align="right">{row.statusTarefa}</TableCell>
                       <TableCell align="right">{row.recursoTarefa}</TableCell>
-                      <TableCell align="center">
+                      <TableCell align="center" style={{display: 'flex', justifyContent: 'flex-end', gap: 8,}}>
                         <Button variant="contained" color="success" onClick={() => handleEditar(row.idTarefa)}><EditIcon fontSize="small" /></Button>            
-                      </TableCell>
-                      <TableCell align="center">
                         <Button variant="contained" color="error" onClick={() => handleDeletar(row.idTarefa)}><DeleteIcon fontSize="small" /></Button>            
                       </TableCell>
                     </TableRow>
@@ -134,7 +132,7 @@ const ListarTarefa = () => {
             </TableContainer>
         </CardContent>
         <CardActions>
-            <Button size="small" variant="contained" onClick={handleOpen}>Criar Tarefa</Button>
+            <Button size="small" variant="contained" onClick={handleOpen} style={{backgroundColor: '#2E3B55'}}>Criar Tarefa</Button>
             <Button size="small" variant="outlined">Cancelar</Button>
       </CardActions> 
     </Card>
